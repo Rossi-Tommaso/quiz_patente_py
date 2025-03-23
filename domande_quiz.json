@@ -1,0 +1,259 @@
+{
+    "quiz": [
+      {
+        "domanda": "Il limite massimo di velocità sulle autostrade è di 130 km/h",
+        "risposta": true,
+        "path": "/images/quiz/autostrada_limite.jpg"
+      },
+      {
+        "domanda": "Il segnale di divieto di sosta si applica anche alla fermata",
+        "risposta": false,
+        "path": "/images/quiz/divieto_sosta.jpg"
+      },
+      {
+        "domanda": "In presenza di strisce pedonali, i pedoni hanno sempre la precedenza",
+        "risposta": true,
+        "path": "/images/quiz/strisce_pedonali.jpg"
+      },
+      {
+        "domanda": "La patente di categoria B consente di guidare motocicli di qualsiasi cilindrata",
+        "risposta": false,
+        "path": "/images/quiz/patente_b.jpg"
+      },
+      {
+        "domanda": "Il sorpasso a destra è sempre vietato",
+        "risposta": true,
+        "path": "/images/quiz/sorpasso_destra.jpg"
+      },
+      {
+        "domanda": "In autostrada è obbligatorio mantenere la distanza di sicurezza",
+        "risposta": true,
+        "path": "/images/quiz/distanza_sicurezza.jpg"
+      },
+      {
+        "domanda": "La striscia continua di mezzeria può essere superata per effettuare il sorpasso",
+        "risposta": false,
+        "path": "/images/quiz/striscia_continua.jpg"
+      },
+      {
+        "domanda": "È obbligatorio accendere i fari anabbaglianti anche di giorno fuori dai centri abitati",
+        "risposta": true,
+        "path": "/images/quiz/fari_anabbaglianti.jpg"
+      },
+      {
+        "domanda": "Il triangolo di emergenza va posizionato ad almeno 50 metri dal veicolo in panne",
+        "risposta": true,
+        "path": "/images/quiz/triangolo_emergenza.jpg"
+      },
+      {
+        "domanda": "Il limite di velocità nei centri abitati è di 60 km/h",
+        "risposta": false,
+        "path": "/images/quiz/limite_centri_abitati.jpg"
+      },
+      {
+        "domanda": "L'uso del cellulare alla guida è consentito se si utilizza un auricolare",
+        "risposta": true,
+        "path": "/images/quiz/cellulare_guida.jpg"
+      },
+      {
+        "domanda": "In caso di nebbia è obbligatorio accendere i fari fendinebbia",
+        "risposta": true,
+        "path": "/images/quiz/fari_fendinebbia.jpg"
+      },
+      {
+        "domanda": "Sulle strade extraurbane principali il limite di velocità è di 110 km/h",
+        "risposta": true,
+        "path": "/images/quiz/strade_extraurbane.jpg"
+      },
+      {
+        "domanda": "È possibile circolare con pneumatici invernali anche in estate",
+        "risposta": true,
+        "path": "/images/quiz/pneumatici_invernali.jpg"
+      },
+      {
+        "domanda": "Il segnale di stop impone di fermarsi e dare precedenza",
+        "risposta": true,
+        "path": "/images/quiz/segnale_stop.jpg"
+      },
+      {
+        "domanda": "In presenza di una rotonda, la precedenza spetta sempre a chi proviene da destra",
+        "risposta": false,
+        "path": "/images/quiz/rotonda_precedenza.jpg"
+      },
+      {
+        "domanda": "Il tasso alcolemico massimo consentito per guidare è di 0,5 g/l",
+        "risposta": true,
+        "path": "/images/quiz/tasso_alcolemico.jpg"
+      },
+      {
+        "domanda": "Le cinture di sicurezza sono obbligatorie solo per i sedili anteriori",
+        "risposta": false,
+        "path": "/images/quiz/cinture_sicurezza.jpg"
+      },
+      {
+        "domanda": "È obbligatorio tenere a bordo il giubbotto catarifrangente",
+        "risposta": true,
+        "path": "/images/quiz/giubbotto_catarifrangente.jpg"
+      },
+      {
+        "domanda": "Il conducente può utilizzare gli abbaglianti in città se la strada è poco illuminata",
+        "risposta": false,
+        "path": "/images/quiz/abbaglianti_citta.jpg"
+      },
+      {
+        "domanda": "È obbligatorio segnalare con gli indicatori di direzione l'intenzione di cambiare corsia",
+        "risposta": true,
+        "path": "/images/quiz/indicatori_direzione.jpg"
+      },
+      {
+        "domanda": "Il limite di velocità nei centri abitati è di 50 km/h",
+        "risposta": true,
+        "path": "/images/quiz/limite_50.jpg"
+      },
+      {
+        "domanda": "È consentito il sorpasso in prossimità o in corrispondenza delle curve",
+        "risposta": false,
+        "path": "/images/quiz/sorpasso_curve.jpg"
+      },
+      {
+        "domanda": "Il segnale di dare precedenza è triangolare con il vertice rivolto verso l'alto",
+        "risposta": true,
+        "path": "/images/quiz/dare_precedenza.jpg"
+      },
+      {
+        "domanda": "È consentito il sorpasso nelle intersezioni non regolate",
+        "risposta": false,
+        "path": "/images/quiz/sorpasso_intersezioni.jpg"
+      },
+      {
+        "domanda": "In caso di pioggia il limite di velocità in autostrada scende a 110 km/h",
+        "risposta": true,
+        "path": "/images/quiz/pioggia_autostrada.jpg"
+      },
+      {
+        "domanda": "I neopatentati possono guidare veicoli con potenza fino a 75 kW per i primi tre anni",
+        "risposta": false,
+        "path": "/images/quiz/neopatentati_potenza.jpg"
+      },
+      {
+        "domanda": "In autostrada è vietato fare retromarcia",
+        "risposta": true,
+        "path": "/images/quiz/retromarcia_autostrada.jpg"
+      },
+      {
+        "domanda": "Le luci di posizione devono essere accese insieme ai fari anabbaglianti",
+        "risposta": true,
+        "path": "/images/quiz/luci_posizione.jpg"
+      },
+      {
+        "domanda": "La patente a punti prevede un totale di 20 punti iniziali",
+        "risposta": false,
+        "path": "/images/quiz/patente_punti.jpg"
+      },
+      {
+        "domanda": "È consentito fermarsi sulla corsia di emergenza in autostrada per rispondere al telefono",
+        "risposta": false,
+        "path": "/images/quiz/corsia_emergenza.jpg"
+      },
+      {
+        "domanda": "Il conducente deve regolare la velocità in base alle condizioni della strada",
+        "risposta": true,
+        "path": "/images/quiz/velocita_condizioni.jpg"
+      },
+      {
+        "domanda": "La corsia di accelerazione serve per immettersi in autostrada",
+        "risposta": true,
+        "path": "/images/quiz/corsia_accelerazione.jpg"
+      },
+      {
+        "domanda": "È obbligatorio dare precedenza ai veicoli che provengono da strade sterrate",
+        "risposta": false,
+        "path": "/images/quiz/strade_sterrate.jpg"
+      },
+      {
+        "domanda": "Il conducente deve sempre moderare la velocità in prossimità delle scuole",
+        "risposta": true,
+        "path": "/images/quiz/prossimita_scuole.jpg"
+      },
+      {
+        "domanda": "È consentito parcheggiare sul marciapiede se non si crea intralcio ai pedoni",
+        "risposta": false,
+        "path": "/images/quiz/parcheggio_marciapiede.jpg"
+      },
+      {
+        "domanda": "Il segnale di divieto di transito è un cerchio rosso con sfondo bianco",
+        "risposta": true,
+        "path": "/images/quiz/divieto_transito.jpg"
+      },
+      {
+        "domanda": "È obbligatorio inserire la freccia quando si esce da una rotatoria",
+        "risposta": true,
+        "path": "/images/quiz/freccia_rotatoria.jpg"
+      },
+      {
+        "domanda": "La revisione periodica del veicolo deve essere effettuata ogni anno",
+        "risposta": false,
+        "path": "/images/quiz/revisione_periodica.jpg"
+      },
+      {
+        "domanda": "In caso di foratura, è obbligatorio montare il ruotino di scorta prima di ripartire",
+        "risposta": true,
+        "path": "/images/quiz/ruotino_scorta.jpg"
+      },
+      {
+        "domanda": "Le strisce di margine continue delimitano la carreggiata",
+        "risposta": true,
+        "path": "/images/quiz/strisce_margine.jpg"
+      },
+      {
+        "domanda": "Il conducente può effettuare un sorpasso se la visibilità è limitata",
+        "risposta": false,
+        "path": "/images/quiz/sorpasso_visibilita.jpg"
+      },
+      {
+        "domanda": "È consentito trainare un veicolo in panne con una corda",
+        "risposta": true,
+        "path": "/images/quiz/traino_corda.jpg"
+      },
+      {
+        "domanda": "I ciclisti possono circolare affiancati in numero superiore a due",
+        "risposta": false,
+        "path": "/images/quiz/ciclisti_affiancati.jpg"
+      },
+      {
+        "domanda": "Le frecce gialle indicano deviazioni per lavori in corso",
+        "risposta": true,
+        "path": "/images/quiz/frecce_gialle.jpg"
+      },
+      {
+        "domanda": "In presenza di semaforo rosso è consentito svoltare a destra con cautela",
+        "risposta": false,
+        "path": "/images/quiz/semaforo_rosso.jpg"
+      },
+      {
+        "domanda": "Il segnale di parcheggio è rappresentato da una P maiuscola bianca su sfondo blu",
+        "risposta": true,
+        "path": "/images/quiz/segnale_parcheggio.jpg"
+      },
+      {
+        "domanda": "È obbligatorio viaggiare sulla corsia di destra in autostrada",
+        "risposta": true,
+        "path": "/images/quiz/corsia_destra.jpg"
+      },
+      {
+        "domanda": "Il conducente deve sempre dare la precedenza ai mezzi di soccorso con sirena accesa",
+        "risposta": true,
+        "path": "/images/quiz/mezzi_soccorso.jpg"
+      },
+      {
+        "domanda": "Il limite di 0,0 g/l di alcol nel sangue è valido per tutti i conducenti",
+        "risposta": false,
+        "path": "/images/quiz/limite_alcol.jpg"
+      },
+      {
+        "domanda": "È possibile guidare con la patente scaduta entro 30 giorni dalla data di scadenza",
+        "risposta": false,
+        "path": "/images/quiz/patente_scaduta.jpg"
+      }
+    ]
+  }
