@@ -1,117 +1,104 @@
 import tkinter as tk
 from tkinter import font
 from PIL import Image, ImageTk
-
-
-domande = [
-        {
-        "domanda": "È possibile guidare con la patente scaduta entro 30 giorni dalla data di scadenza",
-        "risposta": False,
-        "path": "/images/quiz/patente_scaduta.jpg"
-}
-]
+from modules.image_handler import image_button, image_label
 
 class Page:
+    #colors
+    __primaryColor = '#2E3440'
+    __secondaryColor = '#5E81AC'
+    __tertiaryColor = '#88C0D0'
+    __hoverColor = '#81A1C1'
+    __textColor = '#D8DEE9'
+
     def __init__(self, root):
-        # Inizializzazione finestra principale
         self.root = root
         self.root.title('Quiz Patente')
         self.root.geometry("1920x1080")
+        self.root.configure(bg=self.__primaryColor)
         self.root.resizable(False, False)
 
-        # Fonts
-        self.title = font.Font(family="Arial", size=70, weight='bold')
-        self.subtitle = font.Font(family="Arial", size=30)
-        self.text = font.Font(family="Arial", size=20)
+        #fonts
+        fontTitle = font.Font(family="Arial", size=70, weight='bold')
+        fontSubtitle = font.Font(family="Arial", size=30)
+        fontTextBold = font.Font(family="Arial", size=20, weight='bold')
+        fontInfo = font.Font(family="Arial", size=18, slant='italic')
 
         # Generazione oggetti pagina iniziale
-        tk.Label(root, text="Quiz Patente", font=self.title).pack(pady=10)
-        tk.Label(root, text='Inizia il quiz cliccando il pulsante', font=self.subtitle).pack(pady=20)
-        tk.Button(root, text="Inizia", font=self.text, command=self.inizia_quiz).pack(pady=20)
+        title = tk.Label(root, text="Quiz Patente B", font=fontTitle, bg=self.__primaryColor, fg=self.__tertiaryColor)
+        title.place(rely=0.05, relx=0.5, anchor='center')
+        
+        # Testo introduttivo
+        intro = tk.Label(root, text="Preparati al meglio per il tuo esame con domande aggiornate!", font=fontSubtitle, bg=self.__primaryColor, fg=self.__textColor)
+        intro.place(rely=0.16, relx=0.5, anchor='center')
 
-    def inizia_quiz(self):
+        # immagine decorativa
+        image = image_label(self.root, './assets/icons/quiz_decorative_image.png', 400, 400)
+        image.config(bg=self.__primaryColor)
+        image.place(relx=0.5, rely=0.385, anchor='center')
+
+        subtitle = tk.Label(root, text='Inizia il quiz cliccando il pulsante', font=fontSubtitle, bg=self.__primaryColor, fg=self.__textColor)
+        subtitle.place(rely=0.60, relx=0.5, anchor='center')
+
+        # Generazione pulsanti (allenamento e simulazione)
+        simulationButton = image_button(root, './assets/icons/Simulazione.png', 'Inizia simulazione', 'left')
+        simulationButton.config(
+            bg=self.__tertiaryColor,
+            fg=self.__textColor,
+            font=fontTextBold,
+            width=400, height=90,
+            activebackground=self.__hoverColor,
+            activeforeground=self.__textColor,
+            highlightthickness=3,
+            highlightbackground=self.__secondaryColor,
+            command=self.inizia_simulazione
+        )
+        simulationButton.place(relx=0.65, rely=0.75, anchor='center')
+
+        praticleButton = image_button(root, './assets/icons/Esercitazione.png', 'Vai alla pratica', 'left')
+        praticleButton.config(
+            bg=self.__textColor,
+            fg=self.__tertiaryColor,
+            font=fontTextBold,
+            width=400,
+            height=90,
+            activebackground=self.__hoverColor,
+            activeforeground=self.__textColor,
+            highlightthickness=3,
+            highlightbackground=self.__secondaryColor,
+            command=self.inizia_pratica
+        )
+        praticleButton.place(relx=0.35, rely=0.75, anchor='center')
+
+        # footer
+        footer = tk.Label(root, text="Quiz aggiornato al 2025 - basato sull'attuale codice della strada", font=fontInfo, bg=self.__secondaryColor, fg=self.__textColor, padx=10, pady=5)
+        footer.place(relx=0.5, rely=0.95, anchor='center')
+
+    def inizia_simulazione(self):
         # Nasconde la finestra principale
         self.root.withdraw()
 
         # Inizializzazione pagina quiz
         self.quiz_window = tk.Toplevel(self.root)
         self.quiz_window.title('Quiz Patente')
-        self.quiz_window.geometry('1024x768')
+        self.quiz_window.geometry('1920x1080')
         self.quiz_window.configure(bg='#f0f0f0')  # Sfondo grigio chiaro
+        self.quiz_window.resizable(False, False)
+        self.risposte_frame = tk.Frame(self.quiz_window, bg='#f0f0f0')
+        self.risposte_frame.pack(pady=20)
 
-        # Frame per il contenuto
-        content_frame = tk.Frame(self.quiz_window, bg='#f0f0f0')
-        content_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
-        
-        # Intestazione
-        header_frame = tk.Frame(content_frame, bg='#3498db')
-        header_frame.pack(fill=tk.X, pady=(0, 20))
-        
-        quiz_title = tk.Label(header_frame, text="QUIZ PATENTE", font=("Arial", 24, "bold"), bg='#3498db', fg='white')
-        quiz_title.pack(pady=15)
-        
-        # Frame per l'immagine
-        self.img_frame = tk.Frame(content_frame, bg='white', height=300)
-        self.img_frame.pack(fill=tk.X, pady=(0, 20))
-        
-        # Placeholder per l'immagine
-        self.img_label = tk.Label(self.img_frame, bg='white')
-        self.img_label.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-        
-        # Counter domande
-        self.counter_frame = tk.Frame(content_frame, bg='#f0f0f0')
-        self.counter_frame.pack(fill=tk.X, pady=(0, 10))
-        
-        self.question_counter = tk.Label(
-            self.counter_frame, 
-            text="Domanda 1/50", 
-            font=("Arial", 14), 
-            bg='#f0f0f0'
-        )
-        self.question_counter.pack(side=tk.LEFT)
-        
-        self.score_label = tk.Label(self.counter_frame, text="Punteggio: 0/0", font=("Arial", 14), bg='#f0f0f0')
-        self.score_label.pack(side=tk.RIGHT)
-        
-        # Domanda
-        self.domanda_frame = tk.Frame(content_frame, bg='#e8e8e8', bd=1, relief=tk.SOLID)
-        self.domanda_frame.pack(fill=tk.X, pady=(0, 20))
-        
-        self.domanda = tk.Label(self.domanda_frame, text="", font=("Arial", 16), bg='#e8e8e8', justify=tk.LEFT, padx=15, pady=15)
-        self.domanda.pack(fill=tk.X)
-        
-        # Frame per le risposte
-        self.risposte_frame = tk.Frame(content_frame, bg='#f0f0f0')
-        self.risposte_frame.pack(fill=tk.X, pady=(0, 20))
-        
-        # Pulsanti per le risposte (Vero/Falso)
-        self.btn_vero = tk.Button(
-            self.risposte_frame,
-            text="VERO",
-            font=("Arial", 16, "bold"),
-            bg='#27ae60',
-            fg='white',
-            activebackground='#2ecc71',
-            activeforeground='white',
-            padx=30,
-            pady=15,
-            command=lambda: self.verifica_risposta(True)
-        )
-        self.btn_vero.pack(side=tk.LEFT, padx=(0, 10), expand=True, fill=tk.X)
-        
-        self.btn_falso = tk.Button(
-            self.risposte_frame,
-            text="FALSO",
-            font=("Arial", 16, "bold"),
-            bg='#e74c3c',
-            fg='white',
-            activebackground='#c0392b',
-            activeforeground='white',
-            padx=30,
-            pady=15,
-            command=lambda: self.verifica_risposta(False)
-        )
-        self.btn_falso.pack(side=tk.LEFT, padx=(0, 10), expand=True, fill=tk.X)
+    def inizia_pratica(self):
+        # Nasconde la finestra principale
+        self.root.withdraw()
+
+        # Inizializzazione pagina quiz
+        self.quiz_window = tk.Toplevel(self.root)
+        self.quiz_window.title('Quiz Patente')
+        self.quiz_window.geometry('1920x1080')
+        self.quiz_window.configure(bg='#f0f0f0')  # Sfondo grigio chiaro
+        self.quiz_window.resizable(False, False)
+        self.risposte_frame = tk.Frame(self.quiz_window, bg='#f0f0f0')
+        self.risposte_frame.pack(pady=20)
 
 root = tk.Tk()
 app = Page(root)
