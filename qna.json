@@ -1,7 +1,7 @@
 [
     {
         "argomento": "veicoli",
-        "img": "",
+        "img": "assets/divieto/segn_acustiche.png",
         "domanda": "L’autovettura è un veicolo a motore con quattro ruote, destinato al trasporto di massimo nove persone, compreso il conducente",
         "risposta": "True"
     },
@@ -67,7 +67,7 @@
     },
     {
         "argomento": "strada",
-        "img": "",
+        "img": "assets/pericolo/banchina_cedevole.png",
         "domanda": "Il segnale raffigurato è un segnale di pericolo",
         "risposta": "True"
     },
