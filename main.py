@@ -144,12 +144,19 @@ class Page:
         self.navigationFrame = tk.Frame(self.quizWindow, bg=self.__primaryColor, width=1690, height=80)
         self.navigationFrame.place(relx=0.1, rely=0.95, anchor='w')
 
-       # Generazione widget del Navigation Frame
-        prevBtn = tk.Button(
+        # Generazione widget del Navigation Frame
+        prevBtn= image_button(
                 self.navigationFrame,
-                text="←",
-                width=4,
-                height=2,
+                'assets/icons/arrow_left.png',
+                '',
+                'top',
+                50,
+                50
+                )
+        
+        prevBtn.config(
+                width=70,
+                height=70,
                 command=self.prevQuestion,
                 font=self.fontTextBold,
                 bg=self.__tertiaryColor,
@@ -179,12 +186,19 @@ class Page:
             )
         self.endBtn.place(relx=0.5, rely=0.5, anchor='center')
 
-        nextBtn = tk.Button(
+        nextBtn = image_button(
                 self.navigationFrame,
-                text="→",
-                width=4,
-                height=2, 
+                'assets/icons/arrow_right.png',
+                '',
+                'top',
+                50,
+                50
+                )
+        
+        nextBtn.config(
                 command=self.nextQuestion, 
+                width=70,
+                height=70,
                 font=self.fontTextBold,
                 bg=self.__tertiaryColor,
                 fg=self.__primaryColor,
