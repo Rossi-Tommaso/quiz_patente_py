@@ -401,9 +401,9 @@ class Page:
 
 
     def returnToRoot(self):
-        if hasattr(self, 'quizWindow') and self.quizWindow.winfo_exists():
+        if hasattr(self, 'quizWindow'):
             self.quizWindow.destroy()
-        elif hasattr(self, 'selectionWindow') and self.selectionWindow.winfo_exists():
+        elif hasattr(self, 'selectionWindow'):
             self.selectionWindow.destroy()
         
         # Reset
