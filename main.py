@@ -206,7 +206,7 @@ class Page:
                                       fg=self.__textColor, wraplength=800, justify='left')
         self.questionLabel.place(relx=0.4, rely=0.5, anchor='w')
         
-        self.questionInfo.config(text=f'Domanda {self.__questionNumber+1} di 30')
+        self.questionInfo.config(text=f'Domanda {self.__questionNumber+1} di {len(self.__question)}')
 
         img = self.__question[self.__questionNumber]['img']
         if img:
